@@ -1,0 +1,30 @@
+/* Tombol kecil di pojok + mode terang */
+.tools{position:fixed;top:1rem;right:1rem;z-index:20;display:flex;gap:.5rem}
+.tool{width:auto;margin:0;padding:.55rem .95rem;border-radius:999px;font-size:.85rem;font-weight:600;
+  font-family:'Figtree',system-ui,sans-serif;color:#f1edff;background:rgba(31,20,76,.55);
+  border:1px solid rgba(207,198,255,.3);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  transition:background .3s,transform .25s var(--ease)}
+.tool::before{display:none}
+.tool:hover{background:rgba(143,211,255,.28)}
+.tool[aria-pressed="true"]{border-color:var(--beam);box-shadow:0 0 14px -2px var(--beam)}
+
+[data-theme="terang"]{--beam:#3563c9}
+[data-theme="terang"] body{background:#e9e4ff;color:#2a1a55}
+[data-theme="terang"] .scene-img{filter:brightness(1.3) saturate(.75)}
+[data-theme="terang"] .blocks i{filter:brightness(1.25) saturate(.8)}
+[data-theme="terang"] .vignette{background:radial-gradient(ellipse at 28% 55%,rgba(255,255,255,.08) 0,rgba(214,205,255,.55) 100%)}
+[data-theme="terang"] .slab,[data-theme="terang"] .roster{
+  background:linear-gradient(165deg,rgba(252,249,255,.88),rgba(226,219,255,.9));color:#2a1a55;
+  box-shadow:inset 2px 0 0 var(--beam),0 30px 70px -20px rgba(60,40,140,.35)}
+[data-theme="terang"] .sub{color:rgba(42,26,85,.75)}
+[data-theme="terang"] .field input{color:#2a1a55;border-bottom-color:rgba(42,26,85,.35)}
+[data-theme="terang"] .field label{color:rgba(42,26,85,.65)}
+[data-theme="terang"] .err{color:#b3261e}
+[data-theme="terang"] .field.invalid input{border-color:#b3261e}
+[data-theme="terang"] .field.invalid::after{background:#b3261e}
+[data-theme="terang"] button:not(.tool){background:var(--ink);color:#fff}
+[data-theme="terang"] .tool{color:#2a1a55;background:rgba(252,249,255,.7);border-color:rgba(42,26,85,.25)}
+[data-theme="terang"] .hello h1{color:#2a1a55;text-shadow:0 4px 24px rgba(255,255,255,.7)}
+[data-theme="terang"] .hello .salam,[data-theme="terang"] .hello .meta{color:#2a1a55}
+[data-theme="terang"] .roster li{border-top-color:rgba(42,26,85,.15)}
+[data-theme="terang"] .roster li.saya{color:var(--beam)}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beranda siswa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/beranda.css">
+  <link rel="stylesheet" href="css/tema.css">
+  <script src="js/tema.js"></script>
+</head>
+<body class="page-beranda">
+
+  <div class="tools">
+    <button type="button" class="tool" id="btnTema"><span>Mode terang</span></button>
+    <button type="button" class="tool" id="btnSuara" aria-pressed="false"><span>Suara mati</span></button>
+  </div>
+
+
+  <div class="scene" aria-hidden="true">
+    <div class="parallax">
+      <div class="scene-img"></div>
+      <div class="beam beam-a"></div>
+      <div class="beam beam-b"></div>
+    </div>
+    <canvas id="dust"></canvas>
+    <div class="vignette"></div>
+  </div>
+
+  <main class="hello">
+    <p class="salam" id="salam">Selamat datang,</p>
+    <h1 id="namaSiswa">Siswa</h1>
+    <div class="meta">
+      <span id="absenSiswa">Absen 0</span>
+      <span id="tanggal"></span>
+    </div>
+    <button type="button" class="keluar" id="btnKeluar"><span>Keluar</span></button>
+  </main>
+
+  <aside class="roster" aria-label="Daftar absen hari ini">
+    <h2>Sudah masuk hari ini</h2>
+    <p class="hitung" id="hitung"></p>
+    <ol id="daftar"></ol>
+  </aside>
+
+  <div class="wipe cover" id="wipe"></div>
+
+  <script src="js/db.js"></script>
+  <script src="js/suara.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/beranda.js"></script>
+</body>
+</html>

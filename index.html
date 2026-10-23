@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Masuk kelas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tema.css">
+  <script src="js/tema.js"></script>
+</head>
+<body class="page-login">
+
+  <div class="tools">
+    <button type="button" class="tool" id="btnTema"><span>Mode terang</span></button>
+    <button type="button" class="tool" id="btnSuara" aria-pressed="false"><span>Suara mati</span></button>
+  </div>
+
+
+  <div class="scene" aria-hidden="true">
+    <div class="parallax">
+      <div class="scene-img"></div>
+      <div class="beam beam-a"></div>
+      <div class="beam beam-b"></div>
+    </div>
+    <canvas id="dust"></canvas>
+    <div class="vignette"></div>
+  </div>
+
+  <main class="slab">
+    <h1>Masuk kelas</h1>
+    <p class="sub">Isi nama dan nomor absenmu untuk mulai.</p>
+
+    <form id="formMasuk" novalidate>
+      <div class="field" id="fNama">
+        <input id="nama" type="text" placeholder=" " autocomplete="name" required>
+        <label for="nama">Nama lengkap</label>
+        <span class="err" id="errNama" role="alert"></span>
+      </div>
+      <div class="field" id="fAbsen">
+        <input id="absen" type="number" inputmode="numeric" min="1" placeholder=" " required>
+        <label for="absen">Nomor absen</label>
+        <span class="err" id="errAbsen" role="alert"></span>
+      </div>
+      <button type="submit" id="btnMasuk"><span>Masuk</span></button>
+    </form>
+  </main>
+
+  <div class="wipe" id="wipe"></div>
+
+  <script src="js/db.js"></script>
+  <script src="js/suara.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
